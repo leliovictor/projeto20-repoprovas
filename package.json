@@ -10,6 +10,9 @@
     "dev": "nodemon src/server.ts",
     "test": "jest -i"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "keywords": [],
   "author": "Lelio Victor",
   "license": "ISC",
