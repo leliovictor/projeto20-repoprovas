@@ -1,7 +1,7 @@
 import { NextFunction, Response, Request } from "express";
 import { ObjectSchema } from "joi";
 
-import { AppError } from "./error.handler.middleware.js";
+import { AppError } from "./error.handler.middleware";
 
 export function validateSchemaMiddleware(schema: ObjectSchema) {
   return (req: Request, res: Response, next: NextFunction) => {

@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 
-import { AppError } from "../middlewares/error.handler.middleware.js";
+import { AppError } from "../middlewares/error.handler.middleware";
 
 import jwt from "jsonwebtoken";
 
