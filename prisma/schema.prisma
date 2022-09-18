@@ -10,6 +10,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum testCategory {
+  P1
+  P2
+  P3
+  P2ch
+  Outras
+}
+
 model User {
   id       Int    @unique @default(autoincrement())
   email    String @unique
@@ -20,7 +28,7 @@ model User {
 
 model Category {
   id   Int    @unique @default(autoincrement())
-  name String @unique
+  name testCategory @unique
 
   test Test[]
 
