@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum testCategory {
+enum TestCategory {
   P1
   P2
   P3
@@ -27,8 +27,8 @@ model User {
 }
 
 model Category {
-  id   Int    @unique @default(autoincrement())
-  name testCategory @unique
+  id   Int          @unique @default(autoincrement())
+  name TestCategory @unique
 
   test Test[]
 
@@ -44,6 +44,7 @@ model Test {
   teacherDiscipline   TeacherDiscipline @relation(fields: [teacherDisciplineId], references: [id])
   teacherDisciplineId Int
 
+  @@unique([name, categoryId, teacherDisciplineId])
   @@map("tests")
 }
 
