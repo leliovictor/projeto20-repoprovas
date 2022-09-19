@@ -50,5 +50,18 @@ export async function createExam(body: Exam) {
     teacherDisciplineId: body.teacherDisciplineId,
   });
 
-  await repository.registerExam(body);
+  const exam = await repository.registerExam(body);
+  return exam;
+}
+
+export async function getExamsByDisciplines() {
+    const exams = await repository.findAllByDisciplines();
+
+    return exams;
+}
+
+export async function getExamsByTeacher() {
+    const exams = await repository.findAllByTeachers(); 
+
+    return exams;
 }

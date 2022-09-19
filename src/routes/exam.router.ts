@@ -14,5 +14,11 @@ examRouter.post(
   validateSchemaMiddleware(schema.exam),
   controller.postExam
 );
+examRouter.get(
+  "/exams/disciplines",
+  controller.getExamsByDiscipline
+);
+examRouter.get("/exams/teachers",
+controller.getExamsByTeacher)
 
 export default examRouter;
