@@ -5,7 +5,7 @@ import app from "../src/app";
 import * as factory from "./factories/auth.factory";
 
 beforeEach(async () => {
-    await prisma.$executeRaw`TRUNCATE TABLE "User";`;
+    await prisma.$executeRaw`TRUNCATE TABLE "users";`;
 });
 
 describe('Sign up', () => {

@@ -15,5 +15,5 @@ export async function postLogin(_req: Request, res: Response) {
 
   const token = await service.loginUser(body);
 
-  return res.status(200).send(token);
+  return res.status(200).send({token: token});
 }
