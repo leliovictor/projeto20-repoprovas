@@ -20,6 +20,7 @@
     "url": "https://github.com/leliovictor/projeto20-repoprovas/issues"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
