@@ -2,9 +2,9 @@
   "name": "projeto20-repoprovas",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node dist/src/server.js",
     "ts:start": "ts-node src/server.ts",
     "build": "tsc -p tsconfig.json",
     "dev": "nodemon src/server.ts",
